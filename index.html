@@ -14,18 +14,30 @@
     <h1>Sliding <span>Gooey</span> Animation</h1>
     <div id="nav-container">
       <svg
-        width="230"
-        height="120"
+        width="500"
+        height="100"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewbox="0 0 500 100"
       >
-        <filter id="blurMe">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-        </filter>
-
-        <circle cx="60" cy="60" r="50" fill="green" />
-
-        <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
+        <defs>
+          <filter id="gooFilter">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -8"
+            />
+            <feBlend in="SourceGraphic" in2="goo" mode="atop" />
+          </filter>
+        </defs>
+        <g filter="url(#gooFilter)">
+          <circle class="goop" cx="50" cy="50" r="40" />
+          <circle class="goop" cx="50" cy="50" r="40" />
+        </g>
       </svg>
       <nav>
         <a href="#">
