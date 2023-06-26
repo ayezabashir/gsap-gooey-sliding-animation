@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(to bottom, #ee4f94, #d496a2);
+}
+
+h1 span {
+  color: #162265;
+}
+
+#nav-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+nav {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  width: 100px;
+  height: 100%;
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  line-height: 100px;
+  color: #162265;
+}
+
+svg {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+svg circle {
+  fill: rgba(255, 255, 255, 0.4);
+}

@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sliding navigation</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <h1>Sliding <span>Gooey</span> Animation</h1>
+    <div id="nav-container">
+      <svg
+        width="230"
+        height="120"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <filter id="blurMe">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+        </filter>
+
+        <circle cx="60" cy="60" r="50" fill="green" />
+
+        <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
+      </svg>
+      <nav>
+        <a href="#">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="#"> <i class="bx bxl-facebook"></i> </a>
+        <a href="#"> <i class="bx bxl-tiktok"></i> </a>
+        <a href="#"> <i class="bx bxl-gmail"></i> </a>
+        <a href="#">
+          <i class="bx bxl-snapchat"></i>
+        </a>
+      </nav>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
